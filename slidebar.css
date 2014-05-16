@@ -1,0 +1,28 @@
+.slidebar {
+  background: #ddd;
+  display: block; /* Displays an element as a block element (like <p>) */
+  height: 100%;
+  overflow: auto;
+  position: fixed; /* The element is positioned relative to the browser window */
+  width: 300px;
+  right: -300px;
+  z-index: 9999; /* Sets the stack order of a positioned element */
+
+  /**
+   * A shorthand property for setting the four transition properties
+   * 
+   * transtion: property duration timing-function;
+   * 
+   *   transition-property: right;  Defines a comma separated list of CSS property names the transition effect is for
+   *   transition-duration: 0.4s;  Takes 400ms to complete
+   *   transition-timing-function: ease;  Specifies a transition effect with a slow start, then fast, then end slowly
+   */
+  transition: right 0.2s ease-in-out;
+  -webkit-transition: right 0.2s ease-in-out;
+  -moz-transition: right 0.2s ease-in-out;
+  -o-transition: right 0.2s ease-in-out;
+}
+
+.slidebar.slidebar-expanded {
+  right: 0;
+}
